@@ -1,0 +1,23 @@
+---
+name: 'Test'
+
+on: 
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    # paths:
+    #   - "terraform/root-modules/gcp/terraform-tfstates-buckets/**"
+  # Allow manually running the workflow
+  workflow_dispatch:
+
+jobs:
+  test:    
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub event action
+        run: |
+          echo "${{ github.event.action }}"
