@@ -8,8 +8,8 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - "terraform/root-modules/gcp/terraform-tfstates-buckets/**"
+    paths:
+      - ".github/**"
   # Allow manually running the workflow
   workflow_dispatch:
 
